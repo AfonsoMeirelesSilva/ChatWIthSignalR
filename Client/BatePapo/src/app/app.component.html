@@ -1,0 +1,30 @@
+
+  <mat-toolbar color="primary">
+      <span>Chat do Afonshow</span>
+  </mat-toolbar>
+<div class="Historico">
+  <mat-list>
+    <mat-list-item *ngFor="let mensagem of mensagens">
+      <mat-icon mat-list-icon>done_all</mat-icon>
+      <div mat-line>{{mensagem.usuario}}</div>
+      <div mat-line> {{mensagem.mensagem}} </div>
+    </mat-list-item>
+  </mat-list>
+</div>
+  <div class="envioMensagem">
+
+    <mat-form-field class="input" appearance="standard" >
+    <mat-label>Mensagem</mat-label>
+    <input matInput [formControl]="inputMensagem">
+  </mat-form-field>
+
+  <button mat-mini-fab color="primary" (click)="sendMessage()">
+    <mat-icon>send</mat-icon>
+  </button>
+
+</div>
+
+
+
+
+
